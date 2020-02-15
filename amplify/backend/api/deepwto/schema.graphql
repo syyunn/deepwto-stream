@@ -1,0 +1,20 @@
+type ArticleTokens
+  @model
+  @key(fields: ["article"]) { # this field list allocate username as an partition-key(id)
+  article: String!
+  tokens: AWSJSON!
+}
+
+type FactualTokens
+  @model
+  @key(fields: ["ds"]) { # this field list allocate username as an partition-key(id)
+  ds: String!
+  tokens: AWSJSON!
+}
+
+type Cited
+  @model
+  @key(fields: ["ds_article"]) { # this field list allocate username as an partition-key(id)
+  ds_article: String!
+  label: Boolean!
+}

@@ -3,7 +3,7 @@
 
 export type CreateArticleTokensInput = {
   article: string,
-  tokens: string,
+  tokens?: Array< string | null > | null,
 };
 
 export type ModelArticleTokensConditionInput = {
@@ -55,7 +55,7 @@ export type ModelSizeInput = {
 
 export type UpdateArticleTokensInput = {
   article: string,
-  tokens?: string | null,
+  tokens?: Array< string | null > | null,
 };
 
 export type DeleteArticleTokensInput = {
@@ -64,7 +64,7 @@ export type DeleteArticleTokensInput = {
 
 export type CreateFactualTokensInput = {
   ds: string,
-  tokens: string,
+  tokens?: Array< string | null > | null,
 };
 
 export type ModelFactualTokensConditionInput = {
@@ -76,7 +76,7 @@ export type ModelFactualTokensConditionInput = {
 
 export type UpdateFactualTokensInput = {
   ds: string,
-  tokens?: string | null,
+  tokens?: Array< string | null > | null,
 };
 
 export type DeleteFactualTokensInput = {
@@ -150,7 +150,7 @@ export type CreateArticleTokensMutation = {
   createArticleTokens:  {
     __typename: "ArticleTokens",
     article: string,
-    tokens: string,
+    tokens: Array< string | null > | null,
   } | null,
 };
 
@@ -163,7 +163,7 @@ export type UpdateArticleTokensMutation = {
   updateArticleTokens:  {
     __typename: "ArticleTokens",
     article: string,
-    tokens: string,
+    tokens: Array< string | null > | null,
   } | null,
 };
 
@@ -176,7 +176,7 @@ export type DeleteArticleTokensMutation = {
   deleteArticleTokens:  {
     __typename: "ArticleTokens",
     article: string,
-    tokens: string,
+    tokens: Array< string | null > | null,
   } | null,
 };
 
@@ -189,7 +189,7 @@ export type CreateFactualTokensMutation = {
   createFactualTokens:  {
     __typename: "FactualTokens",
     ds: string,
-    tokens: string,
+    tokens: Array< string | null > | null,
   } | null,
 };
 
@@ -202,7 +202,7 @@ export type UpdateFactualTokensMutation = {
   updateFactualTokens:  {
     __typename: "FactualTokens",
     ds: string,
-    tokens: string,
+    tokens: Array< string | null > | null,
   } | null,
 };
 
@@ -215,7 +215,7 @@ export type DeleteFactualTokensMutation = {
   deleteFactualTokens:  {
     __typename: "FactualTokens",
     ds: string,
-    tokens: string,
+    tokens: Array< string | null > | null,
   } | null,
 };
 
@@ -266,7 +266,7 @@ export type GetArticleTokensQuery = {
   getArticleTokens:  {
     __typename: "ArticleTokens",
     article: string,
-    tokens: string,
+    tokens: Array< string | null > | null,
   } | null,
 };
 
@@ -284,7 +284,7 @@ export type ListArticleTokenssQuery = {
     items:  Array< {
       __typename: "ArticleTokens",
       article: string,
-      tokens: string,
+      tokens: Array< string | null > | null,
     } | null > | null,
     nextToken: string | null,
   } | null,
@@ -298,7 +298,7 @@ export type GetFactualTokensQuery = {
   getFactualTokens:  {
     __typename: "FactualTokens",
     ds: string,
-    tokens: string,
+    tokens: Array< string | null > | null,
   } | null,
 };
 
@@ -316,7 +316,7 @@ export type ListFactualTokenssQuery = {
     items:  Array< {
       __typename: "FactualTokens",
       ds: string,
-      tokens: string,
+      tokens: Array< string | null > | null,
     } | null > | null,
     nextToken: string | null,
   } | null,
@@ -358,7 +358,7 @@ export type OnCreateArticleTokensSubscription = {
   onCreateArticleTokens:  {
     __typename: "ArticleTokens",
     article: string,
-    tokens: string,
+    tokens: Array< string | null > | null,
   } | null,
 };
 
@@ -366,7 +366,7 @@ export type OnUpdateArticleTokensSubscription = {
   onUpdateArticleTokens:  {
     __typename: "ArticleTokens",
     article: string,
-    tokens: string,
+    tokens: Array< string | null > | null,
   } | null,
 };
 
@@ -374,7 +374,7 @@ export type OnDeleteArticleTokensSubscription = {
   onDeleteArticleTokens:  {
     __typename: "ArticleTokens",
     article: string,
-    tokens: string,
+    tokens: Array< string | null > | null,
   } | null,
 };
 
@@ -382,7 +382,7 @@ export type OnCreateFactualTokensSubscription = {
   onCreateFactualTokens:  {
     __typename: "FactualTokens",
     ds: string,
-    tokens: string,
+    tokens: Array< string | null > | null,
   } | null,
 };
 
@@ -390,7 +390,7 @@ export type OnUpdateFactualTokensSubscription = {
   onUpdateFactualTokens:  {
     __typename: "FactualTokens",
     ds: string,
-    tokens: string,
+    tokens: Array< string | null > | null,
   } | null,
 };
 
@@ -398,7 +398,7 @@ export type OnDeleteFactualTokensSubscription = {
   onDeleteFactualTokens:  {
     __typename: "FactualTokens",
     ds: string,
-    tokens: string,
+    tokens: Array< string | null > | null,
   } | null,
 };
 

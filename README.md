@@ -1,2 +1,2 @@
 
-## GraphQL schema build with AWS Amplify CLI to cloud-upload the deepwto research dataset on AWS DynamoDB 
+## GraphQL schema build with AWS Amplify CLI on AWS DynamoDB to cloud-access the deepwto research dataset 

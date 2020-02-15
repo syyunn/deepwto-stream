@@ -1,16 +1,20 @@
-type Blog @model {
-  id: ID!
-  name: String!
-  posts: [Post] @connection(name: "BlogPosts")
+type ArticleTokens
+  @model
+  @key(fields: ["article"]) { # this field list allocate username as an partition-key(id)
+  article: String!
+  tokens: AWSJSON!
 }
-type Post @model {
-  id: ID!
-  title: String!
-  blog: Blog @connection(name: "BlogPosts")
-  comments: [Comment] @connection(name: "PostComments")
+
+type FactualTokens
+  @model
+  @key(fields: ["ds"]) { # this field list allocate username as an partition-key(id)
+  ds: String!
+  tokens: AWSJSON!
 }
-type Comment @model {
-  id: ID!
-  content: String
-  post: Post @connection(name: "PostComments")
+
+type Cited
+  @model
+  @key(fields: ["ds_article"]) { # this field list allocate username as an partition-key(id)
+  ds_article: String!
+  label: Boolean!
 }
